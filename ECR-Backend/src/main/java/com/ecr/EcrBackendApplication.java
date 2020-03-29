@@ -10,5 +10,4 @@ public class EcrBackendApplication {
 		SpringApplication.run(EcrBackendApplication.class, args);
 	}
 
-	
 }
