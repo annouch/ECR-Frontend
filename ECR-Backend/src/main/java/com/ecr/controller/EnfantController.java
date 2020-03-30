@@ -71,7 +71,7 @@ throws ResourceNotFoundException{
 	
 }
 
-@DeleteMapping("enfant/{id}")
+@DeleteMapping("enfants/{id}")
 public String deleteEnfant(@PathVariable(value="id") Long enfantId) throws ResourceNotFoundException{
 	
 	Enfant enfantdlt = enfantdao.findById(enfantId).orElseThrow(() -> new ResourceNotFoundException("Enfant non existe avec ce Id :" + enfantId));
