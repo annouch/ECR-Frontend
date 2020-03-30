@@ -1,1 +1,50 @@
-<p>ecr-list works!</p>
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>ECR List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Date de Naissance</th>
+            <th>Ville</th>
+            <th>Handicap de Naissance</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let enfant of enfants">
+                <td>{{enfant.nom}}</td>
+                <td>{{enfant.prenom}}</td>
+                <td>{{enfant.dateNaiss}}</td>
+                <td>{{enfant.ville}}</td>
+                <div  *ngIf="enfant.handicapeNaiss==true"><td>Oui</td></div>
+                <div  *ngIf="enfant.handicapeNaiss==false"><td>Non</td></div>
+                <td>
+                  <!-- <button (click)="deleteEnfant(enfant.id)"  ngbAutofocus class="btn btn-danger">Delete</button> -->
+                  <button (click)="open(mymodal)"  ngbAutofocus class="btn btn-danger">Delete</button>
+                    <button (click)="enfantDetails(enfant.id)" class="btn btn-info" style="margin-left: 10px">Détails</button>
+                </td>
+                <ng-template #mymodal let-modal>
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="modal-basic-title">Confirmation de Supression</h4>
+                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                      <span aria-hidden="true">×</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    voulez-vous vraiment Supprimer la ligne courante ?? 
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" (click)="modal.close(enfant.id)">Oui</button>
+                    
+                  </div>
+                </ng-template>
+              </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  

@@ -1,1 +1,23 @@
-<p>ecr-details works!</p>
+<h2>ECR Détails : {{enfant.nom}} {{enfant.prenom}}</h2> 
+
+<hr/>
+<div *ngIf="enfant">
+  <div>
+    <label><b>Nom : </b></label> {{enfant.nom}}
+  </div>
+  <div>
+    <label><b>Prenom: </b></label> {{enfant.prenom}}
+  </div>
+  <div>
+    <label><b>Date de Naissance: </b></label> {{enfant.dateNaiss}}
+  </div>  
+  <div>
+    <label><b>Ville: </b></label> {{enfant.ville}}
+  </div> 
+  <div *ngIf="enfant.handicapeNaiss==true"><label><b>Handicape de Naissance: </b></label> Oui</div> 
+  <div *ngIf="enfant.handicapeNaiss==false"><label><b>Handicape de Naissance: </b></label> Non</div> 
+</div>
+
+<br>
+<br>
+<button (click)="listEcr()" class="btn btn-primary">Back to ECR List</button><br>

@@ -8,6 +8,9 @@ import { EcrDetailsComponent } from './ecr-details/ecr-details.component';
 import { EcrListComponent } from './ecr-list/ecr-list.component';
 import { EcrUpdateComponent } from './ecr-update/ecr-update.component';
 import  {HttpClientModule } from '@angular/common/http' ;
+import { FormsModule } from '@angular/forms';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import  {HttpClientModule } from '@angular/common/http' ;
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

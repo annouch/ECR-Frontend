@@ -1,0 +1,8 @@
+Installation de : NG Bootstrap - Angular powered Bootstrap widgets  ==> pour popup confirmation
+
+1-npm install --save @ng-bootstrap/ng-bootstrap
+
+2-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';    // app.module.ts
+
+3-ng add @angular/localize     //install
+=================================================================================================

@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ECR-Frontend';
+  title = 'App ECR Spring Boot Java 8 + Angular 8';
 }
